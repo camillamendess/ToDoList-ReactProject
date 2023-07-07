@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {v4 as uuidv4} from 'uuid';
-import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as HashRouter, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -65,7 +65,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <HashRouter>
       <div className="container">
         <Header />
         <Route path="/ToDoList-projetoReact/" exact render={() => (
@@ -78,7 +78,7 @@ const App = () => {
         />
         <Route path="/ToDoList-projetoReact/:taskTitle/" exact component={TaskDetails}/>
       </div>
-    </Router>
+    </HashRouter>
   );    
 };
 
