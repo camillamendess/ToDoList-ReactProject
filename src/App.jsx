@@ -68,7 +68,7 @@ const App = () => {
     <Router>
       <div className="container">
         <Header />
-        <Route path="/ToDoList-projetoReact/" exact render={() => (
+        <Route path="ToDoList-projetoReact/" exact render={() => (
           <>
             <AddTask handleTaskAddition={handleTaskAddition} />
             <Tasks tasks={tasks} 
@@ -76,7 +76,7 @@ const App = () => {
           </>
         )}
         />
-        <Route path="/ToDoList-projetoReact/:taskTitle" exact component={TaskDetails}/>
+        <Route path="ToDoList-projetoReact/:taskTitle" exact component={TaskDetails}/>
       </div>
     </Router>
   );    
