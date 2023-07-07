@@ -76,7 +76,7 @@ const App = () => {
           </>
         )}
         />
-        <Route path="/:taskTitle" exact component={TaskDetails}/>
+{/*         <Route path="/:taskTitle" exact component={TaskDetails}/> */}
       </div>
     </Router>
   );    
