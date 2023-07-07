@@ -53,7 +53,7 @@ const App = () => {
     <Router>
       <div className="container">
         <Header />
-        <Route path="/" exact render={() => (
+        <Route path="/ToDoList-ReactProject" exact render={() => (
           <>
             <AddTask handleTaskAddition={handleTaskAddition} />
             <Tasks tasks={tasks} 
