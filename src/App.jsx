@@ -53,17 +53,12 @@ const App = () => {
     <Router>
       <div className="container">
         <Header />
-        <Route path="/ToDoList-ReactProject" exact render={() => (
-          <>
-            <AddTask handleTaskAddition={handleTaskAddition} />
-            <Tasks tasks={tasks} 
-            handleTaskClick={handleTaskClick} handleTaskRemove= {handleTaskRemove} />
-          </>
-        )}
-        />
+        <AddTask handleTaskAddition={handleTaskAddition} />
+        <Tasks tasks={tasks} 
+        handleTaskClick={handleTaskClick} handleTaskRemove= {handleTaskRemove} />
       </div>
     </Router>
-  );    
+  );
 };
 
 export default App;
