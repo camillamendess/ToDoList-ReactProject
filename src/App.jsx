@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import {v4 as uuidv4} from 'uuid';
 import { BrowserRouter as HashRouter, Route } from "react-router-dom";
 
@@ -24,19 +23,6 @@ const App = () => {
       completed: true,
     },
   ]);
-
-  useEffect(() => {
-    const fetchTasks = async () => {
-      const {data} = await axios.get(
-        "https://jsonplaceholder.cypress.io/todos?_limit=10"
-      );
-
-      setTasks(data);
-
-    };
-
-    fetchTasks();
-  }, [] );
 
   const handleTaskRemove = (taskId) => {
     const newTasks = tasks.filter(task => task.id !== taskId);
@@ -76,7 +62,7 @@ const App = () => {
           </>
         )}
         />
-        <Route path="/ToDoList-projetoReact/:taskTitle/" exact component={TaskDetails}/>
+        <Route path="/task/:taskTitle/" exact component={TaskDetails}/>
       </div>
     </HashRouter>
   );    
